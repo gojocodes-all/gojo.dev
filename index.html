@@ -130,6 +130,66 @@
             transition: opacity 0.6s ease-in-out, visibility 0.6s;
         }
 
+        .loader-ring-one,
+.loader-ring-two{
+    position:absolute;
+    border-radius:50%;
+}
+
+.loader-ring-one{
+    width:120px;
+    height:120px;
+    border:2px solid rgba(34,255,136,.15);
+    border-top:2px solid #22ff88;
+    animation:loaderSpin 2s linear infinite;
+}
+
+.loader-ring-two{
+    width:90px;
+    height:90px;
+    border:2px solid rgba(34,255,136,.08);
+    border-bottom:2px solid #22ff88;
+    animation:loaderSpinReverse 3s linear infinite;
+}
+
+.loader-symbol{
+    font-size:42px;
+    font-weight:700;
+    color:#22ff88;
+    text-shadow:
+        0 0 10px rgba(34,255,136,.7),
+        0 0 20px rgba(34,255,136,.5),
+        0 0 40px rgba(34,255,136,.3);
+}
+
+@keyframes loaderSpin{
+    from{
+        transform:rotate(0deg);
+    }
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+@keyframes loaderSpinReverse{
+    from{
+        transform:rotate(360deg);
+    }
+    to{
+        transform:rotate(0deg);
+    }
+}
+
+        .loader-symbol{
+    font-size:42px;
+    font-weight:700;
+    color:#22ff88;
+
+    text-shadow:
+        0 0 10px rgba(34,255,136,.7),
+        0 0 20px rgba(34,255,136,.5),
+        0 0 40px rgba(34,255,136,.3);
+                      }
         /* Reveal Animations */
         .reveal {
             opacity: 0;
@@ -420,20 +480,33 @@ document.documentElement.classList.add('light');
 <body class="antialiased font-sans selection:bg-brand selection:text-black">
 
     <!-- Loading Screen -->
-    <div id="loader">
-<div class="text-center flex flex-col items-center gap-4">
-<div class="relative w-28 h-28">
-<div class="absolute inset-0 rounded-full border border-brand/20 animate-spin-slow"></div>
-<div class="absolute inset-3 rounded-full border border-brand animate-spin-reverse"></div>
-<div class="absolute inset-6 flex items-center justify-center rounded-full bg-brand/10">
-<img src="gojo-logo.png" alt="GOJO.DEV" style="width:70%;height:70%;object-fit:contain"
-onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
-<span style="display:none;color:#22ff88;font-size:32px;font-weight:bold">G</span>
-</div>
-</div>
-<h2 class="font-display text-2xl font-bold tracking-widest text-gradient">GOJO.DEV</h2>
-<p class="text-gray-400">Crafting premium digital experiences</p>
-</div>
+<!-- Loading Screen -->
+<div id="loader">
+    <div class="text-center flex flex-col items-center gap-4">
+
+        <div class="relative w-28 h-28">
+
+            <div class="absolute inset-0 rounded-full border border-brand/20 animate-spin-slow"></div>
+
+            <div class="absolute inset-3 rounded-full border border-brand animate-spin-reverse"></div>
+
+            <div class="absolute inset-6 flex items-center justify-center rounded-full bg-brand/10">
+
+                <span class="loader-symbol">&lt;/&gt;</span>
+
+            </div>
+
+        </div>
+
+        <h2 class="font-display text-2xl font-bold tracking-widest text-gradient">
+            GOJO.DEV
+        </h2>
+
+        <p class="text-gray-400">
+            Crafting premium digital experiences
+        </p>
+
+    </div>
 </div>
 
     <!-- Scroll Progress -->
@@ -1099,7 +1172,7 @@ onerror="this.style.display='none';this.nextElementSibling.style.display='block'
                 setTimeout(() => {
                     loader.style.visibility = 'hidden';
                 }, 600);
-            }, 1500);
+            }, 3500);
 
             // --- 2. Update Footer Year ---
             document.getElementById('year').textContent = new Date().getFullYear();
@@ -1332,4 +1405,4 @@ onerror="this.style.display='none';this.nextElementSibling.style.display='block'
 </body>
 </html>
 
-```
+
