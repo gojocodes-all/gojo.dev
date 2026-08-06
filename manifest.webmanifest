@@ -1,0 +1,18 @@
+{
+  "name": "GOJO.DEV — Owojuyigbe Jomiloju",
+  "short_name": "GOJO.DEV",
+  "description": "Portfolio of a web developer and digital designer based in Lagos, Nigeria.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#050706",
+  "theme_color": "#050706",
+  "icons": [
+    {
+      "src": "/gojo-logo.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
