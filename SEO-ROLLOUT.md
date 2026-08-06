@@ -5,6 +5,7 @@ Updated: 2026-08-06
 ## Implemented
 
 - Unique page titles and meta descriptions for the homepage and four case studies.
+- Exact-name entity signals for `Owojuyigbe Oluwajomiloju` across visible copy, author metadata, social metadata and structured data.
 - Canonical URLs using the live `https://www.gojodev.name.ng/` host.
 - Open Graph and X/Twitter metadata, including a custom GOJO.DEV social preview image.
 - `Person`, `WebSite`, `ProfilePage`, `ItemList`, `CreativeWork`, and `SoftwareSourceCode` structured data where appropriate.
