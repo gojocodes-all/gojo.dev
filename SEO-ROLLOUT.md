@@ -13,6 +13,7 @@ Updated: 2026-08-06
 - A stronger search-focused homepage heading and clear Lagos location context.
 - Dedicated case-study pages for Daar El-Mahfouz, Providence Heights, GOJO.DEV WhatsApp CRM, and A&G Varieties Store.
 - `robots.txt`, `sitemap.xml`, `manifest.webmanifest`, and an index-safe custom 404 page.
+- A dedicated favicon package (`.ico`, 48px, 96px, 180px, 192px, and 512px) using the recognizable GOJO.DEV code mark across every page and the web-app manifest.
 - Internal links between the homepage and project pages.
 - Automatic learning-month counter based on a December 2025 start date, with an `8+` HTML fallback for crawlers.
 - Broken A&G live-demo link removed and the project labelled as an archived build.
